@@ -1,0 +1,6 @@
+/uploads
+uploads/*
+.env
+flask_session/*
+/flask_session
+env

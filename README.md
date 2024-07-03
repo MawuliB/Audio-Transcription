@@ -59,6 +59,12 @@ To run this project, ensure you have the following installed:
 - AssemblyAI SDK transcribes the WAV file into text.
 - Transcription results are displayed to the user.
 
+### Demo Picture
+![Demo Picture](transcribe.png)
+
+This project provides a streamlined approach to audio transcription using modern Python libraries and APIs.
+
+
 
 
 This project provides a streamlined approach to audio transcription using modern Python libraries and APIs.

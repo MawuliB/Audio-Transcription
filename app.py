@@ -13,14 +13,16 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
-ffmpeg_path = r'C:\ffmpeg-7.0.1-essentials_build\bin'
+"""
+ffmpeg_path = r'C:\ffmpeg-7.0.1-essentials_build\bin' # Path to the ffmpeg executable
 os.environ["PATH"] += os.pathsep + ffmpeg_path
+""" # Uncomment this block if you are using Windows and ffmpeg can't be found
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
 def convert_to_wav(file_path):
-    AudioSegment.converter = ffmpeg_path + r'\ffmpeg.exe'
+    # AudioSegment.converter = ffmpeg_path + r'\ffmpeg.exe' # Path to the ffmpeg executable # Uncomment this line if you are using Windows and ffmpeg can't be found
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"No such file: {file_path}")
     audio = AudioSegment.from_file(file_path)

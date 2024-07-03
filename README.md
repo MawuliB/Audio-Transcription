@@ -62,9 +62,5 @@ To run this project, ensure you have the following installed:
 ### Demo Picture
 ![Demo Picture](transcribe.png)
 
-This project provides a streamlined approach to audio transcription using modern Python libraries and APIs.
-
-
-
 
 This project provides a streamlined approach to audio transcription using modern Python libraries and APIs.

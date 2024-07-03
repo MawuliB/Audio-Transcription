@@ -1,16 +1,64 @@
-## AUDIO TRANSCRIPTION USING ASSEMBLY AI
-This is a simple project the uses assemblyai sdk to trancribe wav audio file to text.
+## Audio Transcription using AssemblyAI
+
+This project demonstrates how to transcribe a WAV audio file into text using AssemblyAI SDK in Python.
 
 ### Description
-The project utilizes the AssemblyAI SDK to convert a WAV audio file into text. It provides a simple and efficient way to transcribe audio related files(videos included).
-It uses AudioSegment from pydub to covert the uploaded file to a WAV file and saves it in the uploads folder for further processing.
-The wav is then converted to text by the SDK.
-Session management is also included just for the feel 😅
 
-### Prerequisite
-Python 3.6 and above
-ffmpeg installed
+The project leverages the AssemblyAI SDK to accurately convert a WAV audio file (including audio from videos) into text. It utilizes `AudioSegment` from `pydub` to convert uploaded files into WAV format, which are then stored in an `uploads` folder for subsequent processing. The WAV file is transcribed into text using the AssemblyAI SDK. Additionally, session management via Flask-Session is implemented for handling user sessions.
+
+### Prerequisites
+
+To run this project, ensure you have the following installed:
+
+- Python 3.6 and above
+- `ffmpeg` for handling audio conversion (installation details below)
 
 ### Setup
-Create an environment with python -m venv env
-install
+
+1. **Python Environment Setup:**
+   - Create a virtual environment:
+     ```bash
+     python -m venv env
+     ```
+   - Activate the virtual environment:
+     - On Windows:
+       ```bash
+       .\env\Scripts\activate
+       ```
+     - On macOS/Linux:
+       ```bash
+       source env/bin/activate
+       ```
+
+2. **Install Required Packages:**
+   Install the necessary Python packages using `pip`:
+   ```bash
+   pip install -r requirements.txt
+
+3. **Installing ffmpeg:**
+
+    Download ffmpeg from ffmpeg.org/download.html.
+    Add ffmpeg to your system's PATH or place it in a directory accessible from the command line (e.g., C:\ for Windows).
+
+4. **Configuration:**
+
+    Create a .env file in your project directory and add your AssemblyAI API key:
+
+    ```ASSEMBLYAI_API_KEY=your_api_key_here```
+    ```SECRET_KEY=secret_key_here```
+
+5. Run the Application:
+
+    Start the Flask application: ```python app.py```
+        Access the application at http://127.0.0.1:5000.
+
+### Usage
+
+- Upload an audio file (supports WAV format).
+- The file will be converted to WAV using pydub.
+- AssemblyAI SDK transcribes the WAV file into text.
+- Transcription results are displayed to the user.
+
+
+
+This project provides a streamlined approach to audio transcription using modern Python libraries and APIs.

@@ -47,6 +47,8 @@ To run this project, ensure you have the following installed:
     ```ASSEMBLYAI_API_KEY=your_api_key_here```
     ```SECRET_KEY=secret_key_here```
 
+    Get AssemblyAI key by registering here `https://www.assemblyai.com/app`
+
 5. Run the Application:
 
     Start the Flask application: ```python app.py```
